@@ -21,7 +21,9 @@ define(['pachinko', 'knockout', 'underscore'], function(Pachinko, ko, _) {
 			}),
 			State({
 				name: 'notifying old enough',
-				transitions: []
+				transitions: [
+					Transition( when(model.age, 'is greater than', 17), 'asking the age')
+				]
 			}),
 			State({
 				name: 'notifying not old enough',

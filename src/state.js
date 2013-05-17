@@ -1,12 +1,33 @@
 define(['underscore'], function(_){
-	var State = function(options /* Object */) {
+	var State = function(options) {
 		return {
-			proceed: function(states /* Array[State] */) {
-				var hit = _.find(options.transitions, function(transition /* Transition */) {
+			// get the next state based on evaluating this states transitions
+			nextState: function(states) {
+				var activeTransition = _.find(options.transitions, function(transition) {
 					return transition(states);
 				});
 
-				return hit ? hit(states) : this;
+				return activeTransition ? activeTransition(states) : this;
+			},
+
+			getCurrent: function (states, visited) {
+				var next = this.nextState(states);
+
+				if (next === this || _.contains(visited, next)) {
+					return this;
+				} else {
+					return next.getCurrent(states, visited.concat(this));
+				}
+			},
+
+			getPath: function(states, visited) {
+				var next = this.nextState(states);
+
+				if (next === this || _.contains(visited, next.name())) {
+					return [this.name()];
+				} else {
+					return [this.name()].concat(next.getPath(states, visited.concat([this.name()])));
+				}
 			},
 
 			name: function() {
