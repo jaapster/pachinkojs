@@ -1,19 +1,23 @@
 define(['underscore'], function(_){
 	var State = function(options) {
+
 		return {
-			// get the next state based on evaluating this states transitions
 			nextState: function(states) {
 				var activeTransition = _.find(options.transitions, function(transition) {
 					return transition(states);
-				});
+				}, this);
 
 				return activeTransition ? activeTransition(states) : this;
 			},
 
 			getCurrent: function (states, visited) {
+				visited = visited || [];
+
 				var next = this.nextState(states);
 
-				if (next === this || _.contains(visited, next)) {
+				if (next === this) {
+					return this;
+				} else if (_.contains(visited, next)) {
 					return this;
 				} else {
 					return next.getCurrent(states, visited.concat(this));
@@ -21,12 +25,18 @@ define(['underscore'], function(_){
 			},
 
 			getPath: function(states, visited) {
-				var next = this.nextState(states);
+				visited = visited || [];
 
-				if (next === this || _.contains(visited, next.name())) {
-					return [this.name()];
+				var next = this.nextState(states),
+					name = this.name();
+
+				if (next === this) {
+					return name;
+				} else if (_.contains(visited, name)) {
+					return [name];
 				} else {
-					return [this.name()].concat(next.getPath(states, visited.concat([this.name()])));
+					var tail = next.getPath(states, visited.concat([name]));
+					return [name].concat(tail);
 				}
 			},
 
@@ -39,6 +49,7 @@ define(['underscore'], function(_){
 			},
 
 			_name: options.name
+
 		}
 	};
 

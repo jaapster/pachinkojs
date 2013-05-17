@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Pachinko</title>
+
+    <script src="../libs/require.js"></script>
+    <script src="config.require.js"></script>
+
+    <link rel="stylesheet" href="../libs/mocha/mocha.css" />
+
+    <script>
+
+        // Test configuration /////////////////////////////////////////////////
+
+        var _TEST_CONFIG = {
+			baseUrl: './',
+            files: [
+                'test.expression.js',
+				'test.transition.js',
+				'test.state.js'
+            ]
+        };
+
+        // Run tests //////////////////////////////////////////////////////////
+
+        requirejs.config({
+			baseUrl: _TEST_CONFIG.baseUrl
+		});
+
+        requirejs(['test-runner'], function (runTests) {
+            runTests(_TEST_CONFIG);
+        });
+
+    </script>
+
+</head>
+<body>
+<div id="mocha"></div>
+<div id="mocha-fixtures"></div>
+</body>
+</html>

@@ -9,6 +9,7 @@ define(['underscore'], function(_) {
 			operator = 	executable(arguments[1]);
 
 		function hasValue(executable) {
+			if (executable() === null ) return false;
 			return typeof executable() !== 'undefined' && executable() !== '' && executable().length !== 0;
 		}
 

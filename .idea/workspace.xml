@@ -2,22 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6ce59309-71f1-42ef-961b-91763f7e38db" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/example/index.html" afterPath="$PROJECT_DIR$/example/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/example/config.require.js" afterPath="$PROJECT_DIR$/example/config.require.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/expression.js" afterPath="$PROJECT_DIR$/src/expression.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/example/main.js" afterPath="$PROJECT_DIR$/example/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/state.js" afterPath="$PROJECT_DIR$/src/state.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/statemachine.js" afterPath="$PROJECT_DIR$/src/statemachine.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/transition.js" afterPath="$PROJECT_DIR$/src/transition.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="pachinkojs.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="6ce59309-71f1-42ef-961b-91763f7e38db" time="1368787963010" ignored="false" />
+    <file path="/Dummy.txt" changelist="6ce59309-71f1-42ef-961b-91763f7e38db" time="1368808532077" ignored="false" />
     <file path="/index.html" changelist="6ce59309-71f1-42ef-961b-91763f7e38db" time="1368789946626" ignored="false" />
-    <file path="/main.js" changelist="6ce59309-71f1-42ef-961b-91763f7e38db" time="1368789612246" ignored="false" />
+    <file path="/main.js" changelist="6ce59309-71f1-42ef-961b-91763f7e38db" time="1368797406767" ignored="false" />
     <file path="/config.require.js" changelist="6ce59309-71f1-42ef-961b-91763f7e38db" time="1368789405845" ignored="false" />
-    <file path="/statemachine.js" changelist="6ce59309-71f1-42ef-961b-91763f7e38db" time="1368795242293" ignored="false" />
+    <file path="/statemachine.js" changelist="6ce59309-71f1-42ef-961b-91763f7e38db" time="1368820850987" ignored="false" />
     <file path="/.gitignore" changelist="6ce59309-71f1-42ef-961b-91763f7e38db" time="1368790578651" ignored="false" />
-    <file path="/state.js" changelist="6ce59309-71f1-42ef-961b-91763f7e38db" time="1368795036685" ignored="false" />
+    <file path="/state.js" changelist="6ce59309-71f1-42ef-961b-91763f7e38db" time="1368825924813" ignored="false" />
+    <file path="$PROJECT_DIR$/../../consume/components/pachinko/StateMachine.js" changelist="6ce59309-71f1-42ef-961b-91763f7e38db" time="1368796570893" ignored="false" />
+    <file path="/StateMachine.js" changelist="6ce59309-71f1-42ef-961b-91763f7e38db" time="1368796553645" ignored="false" />
+    <file path="/test.js" changelist="6ce59309-71f1-42ef-961b-91763f7e38db" time="1368823231526" ignored="false" />
+    <file path="/test.html" changelist="6ce59309-71f1-42ef-961b-91763f7e38db" time="1368822501636" ignored="false" />
+    <file path="/a.dummy" changelist="6ce59309-71f1-42ef-961b-91763f7e38db" time="1368822080573" ignored="false" />
+    <file path="/expression.js" changelist="6ce59309-71f1-42ef-961b-91763f7e38db" time="1368823370789" ignored="false" />
+    <file path="/test.transition.js" changelist="6ce59309-71f1-42ef-961b-91763f7e38db" time="1368823987986" ignored="false" />
+    <file path="/test.state.js" changelist="6ce59309-71f1-42ef-961b-91763f7e38db" time="1368826414836" ignored="false" />
+    <file path="/transition.js" changelist="6ce59309-71f1-42ef-961b-91763f7e38db" time="1368824932662" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,37 +46,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/example/index.html">
+      <file leaf-file-name="test.state.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/test.state.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="7" selection-start="1142" selection-end="1142" vertical-scroll-proportion="-26.875">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/example/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="3" selection-start="821" selection-end="821" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="expression.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/expression.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="statemachine.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/statemachine.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="3" selection-start="1345" selection-end="1345" vertical-scroll-proportion="0.7394366">
+            <state line="105" column="16" selection-start="2170" selection-end="2170" vertical-scroll-proportion="0.8462415">
               <folding />
             </state>
           </provider>
@@ -76,16 +58,7 @@
       <file leaf-file-name="state.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/state.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="41" selection-start="681" selection-end="681" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="transition.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/transition.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="23" selection-start="275" selection-end="275" vertical-scroll-proportion="0.0">
+            <state line="56" column="3" selection-start="1141" selection-end="1141" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -109,23 +82,30 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/config.require.js" />
-        <option value="$PROJECT_DIR$/example/config.require.js" />
-        <option value="$PROJECT_DIR$/src/main.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/example/index.html" />
         <option value="$PROJECT_DIR$/example/main.js" />
-        <option value="$PROJECT_DIR$/src/state.js" />
-        <option value="$PROJECT_DIR$/src/transition.js" />
         <option value="$PROJECT_DIR$/src/statemachine.js" />
+        <option value="$PROJECT_DIR$/test/test.main.js" />
+        <option value="$PROJECT_DIR$/test/config.require.js" />
+        <option value="$PROJECT_DIR$/example/config.require.js" />
+        <option value="$PROJECT_DIR$/test/test-runner.js" />
+        <option value="$PROJECT_DIR$/test/test.js" />
+        <option value="$PROJECT_DIR$/src/expression.js" />
+        <option value="$PROJECT_DIR$/test/test.expression.js" />
+        <option value="$PROJECT_DIR$/test/test.transition.js" />
+        <option value="$PROJECT_DIR$/src/transition.js" />
+        <option value="$PROJECT_DIR$/test/test.html" />
+        <option value="$PROJECT_DIR$/src/state.js" />
+        <option value="$PROJECT_DIR$/test/test.state.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="348" />
-    <option name="y" value="26" />
+    <option name="x" value="212" />
+    <option name="y" value="22" />
     <option name="width" value="1327" />
-    <option name="height" value="1140" />
+    <option name="height" value="1024" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -153,6 +133,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -181,28 +162,58 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pachinkojs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pachinkojs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pachinkojs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pachinkojs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="example" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/test" />
+      <recent name="$PROJECT_DIR$/libs" />
       <recent name="$PROJECT_DIR$/example" />
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/test" />
       <recent name="$PROJECT_DIR$/example" />
     </key>
   </component>
@@ -213,6 +224,20 @@
       <option name="filePath" />
       <option name="scope" value="ALL" />
       <option name="testName" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
+      <setting name="configLocationType" value="CONFIG_FILE" />
+      <setting name="settingsFile" value="" />
+      <setting name="serverType" value="INTERNAL" />
+      <setting name="preferredDebugBrowser" value="CHROME" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
       <method />
     </configuration>
     <list size="0" />
@@ -244,25 +269,25 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="348" y="26" width="1327" height="1140" extended-state="1" />
+    <frame x="212" y="22" width="1327" height="1024" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25383437" sideWeight="0.9990206" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -326,14 +351,14 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/README.md">
+    <entry file="file://$PROJECT_DIR$/example/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="43" column="7" selection-start="1142" selection-end="1142" vertical-scroll-proportion="-26.875">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/example/css/bootstrap.css">
+    <entry file="file://$PROJECT_DIR$/libs/mocha/bin/mocha">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
@@ -342,77 +367,98 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/example/config.require.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="0" selection-start="291" selection-end="291" vertical-scroll-proportion="0.0">
+        <state line="0" column="18" selection-start="18" selection-end="18" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.js">
+    <entry file="file://$PROJECT_DIR$/libs/chai/lib/chai/core/assertions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="2" selection-start="381" selection-end="381" vertical-scroll-proportion="0.0">
+        <state line="49" column="44" selection-start="1010" selection-end="1010" vertical-scroll-proportion="0.75170845">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../foundation/components/CO_TwoStageQuestion/templates/CO_TwoStageQuestion.html">
+    <entry file="file://$PROJECT_DIR$/test/config.require.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="10" selection-start="284" selection-end="487" vertical-scroll-proportion="0.33379695">
+        <state line="14" column="18" selection-start="198" selection-end="198" vertical-scroll-proportion="0.23917995">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../foundation/index.html">
+    <entry file="file://$PROJECT_DIR$/../../ipe/client/src/modules/browser/test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="14" selection-start="391" selection-end="391" vertical-scroll-proportion="0.33379695">
+        <state line="17" column="30" selection-start="483" selection-end="501" vertical-scroll-proportion="-10.625">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../foundation/components/DE_RDW/templates/DE_RDW.html">
+    <entry file="file://$PROJECT_DIR$/test/test-runner.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="34" selection-start="13" selection-end="34" vertical-scroll-proportion="0.0">
+        <state line="54" column="3" selection-start="710" selection-end="710" vertical-scroll-proportion="0.9225513">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/example/index.html">
+    <entry file="file://$PROJECT_DIR$/../../ipe/client/src/modules/contextViewer/test/test.main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="7" selection-start="1142" selection-end="1142" vertical-scroll-proportion="-26.875">
+        <state line="16" column="11" selection-start="256" selection-end="329" vertical-scroll-proportion="0.2733485">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/chai/lib/chai.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="4" selection-start="853" selection-end="853" vertical-scroll-proportion="0.6241458">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/expression.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="20" column="56" selection-start="738" selection-end="738" vertical-scroll-proportion="0.34168565">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/example/main.js">
+    <entry file="file://$PROJECT_DIR$/test/test.expression.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="3" selection-start="821" selection-end="821" vertical-scroll-proportion="0.0">
+        <state line="2" column="38" selection-start="90" selection-end="90" vertical-scroll-proportion="0.034168564">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/state.js">
+    <entry file="file://$PROJECT_DIR$/test/test.transition.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="41" selection-start="681" selection-end="681" vertical-scroll-proportion="0.0">
+        <state line="22" column="6" selection-start="0" selection-end="654" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="37" selection-start="444" selection-end="444" vertical-scroll-proportion="-11.25">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/transition.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="23" selection-start="275" selection-end="275" vertical-scroll-proportion="0.0">
+        <state line="6" column="0" selection-start="260" selection-end="260" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/statemachine.js">
+    <entry file="file://$PROJECT_DIR$/src/state.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="3" selection-start="1345" selection-end="1345" vertical-scroll-proportion="0.7394366">
+        <state line="56" column="3" selection-start="1141" selection-end="1141" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test.state.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="105" column="16" selection-start="2170" selection-end="2170" vertical-scroll-proportion="0.8462415">
           <folding />
         </state>
       </provider>

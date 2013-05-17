@@ -9,29 +9,31 @@ define(['pachinko', 'knockout', 'underscore'], function(Pachinko, ko, _) {
 		age: ko.observable()
 	};
 
+	var p = Pachinko([
+		State({
+			name: 'asking the age',
+			initial: true,
+			transitions: [
+				Transition( when(model.age, 'is greater than', 17), 'notifying old enough'),
+				Transition( when(model.age, 'is less than', 18), 'notifying not old enough')
+			]
+		}),
+		State({
+			name: 'notifying old enough',
+			transitions: [
+				Transition( when(model.age, 'is greater than', 17), 'asking the age')
+			]
+		}),
+		State({
+			name: 'notifying not old enough',
+			transitions: []
+		})
+	], [
+		model.age
+	]);
+
 	_.extend(model, {
-		logic: Pachinko([
-			State({
-				name: 'asking the age',
-				initial: true,
-				transitions: [
-					Transition( when(model.age, 'is greater than', 17), 'notifying old enough'),
-					Transition( when(model.age, 'is less than', 18), 'notifying not old enough')
-				]
-			}),
-			State({
-				name: 'notifying old enough',
-				transitions: [
-					Transition( when(model.age, 'is greater than', 17), 'asking the age')
-				]
-			}),
-			State({
-				name: 'notifying not old enough',
-				transitions: []
-			})
-		], [
-			model.age
-		])
+		logic: p
 	});
 
 	ko.applyBindings(model);
