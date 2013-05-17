@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Examples</title>
+	<link href="css/bootstrap.css" rel="stylesheet"/>
+	<script src="../libs/require.js" data-main="main"></script>
+	<script src="config.require.js"></script>
+</head>
+<body>
+<div class="navbar">
+	<div class="navbar-inner">
+		<a class="brand" href="#">Pachinko Examples</a>
+		<ul class="nav">
+
+		</ul>
+	</div>
+</div>
+<div class="row">
+	<div class="span4"></div>
+	<div class="span8">
+		<form class="form-horizontal span8">
+			<!-- ko if: logic.stateInPath('asking the age') -->
+			<div class="control-group">
+				<label class="control-label">What is your age?</label>
+				<div class="controls">
+					<input type="text" data-bind="value: age" required/>
+				</div>
+			</div>
+			<!-- /ko -->
+			<!-- ko if: logic.stateIs('notifying old enough') -->
+			<div class="control-group">
+				Yes, you are old enough to drive in the Netherlands!
+			</div>
+			<!-- /ko -->
+			<!-- ko if: logic.stateIs('notifying not old enough') -->
+			<div class="control-group">
+				Sorry, you are not yet old enough to drive in the Netherlands ...
+			</div>
+			<!-- /ko -->
+		</form>
+	</div>
+</div>
+</body>
+</html>
