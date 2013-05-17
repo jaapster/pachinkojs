@@ -1,0 +1,4 @@
+pachinkojs
+==========
+
+Functional state machine
