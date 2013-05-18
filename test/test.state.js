@@ -1,4 +1,4 @@
-define(['../src/transition', '../src/expression', '../src/state'], function (Transition, Expression, State) {
+define(['../src/transition', '../src/expression', '../src/state'], function (Transition, when, State) {
 
 	describe('State', function() {
 
@@ -6,42 +6,52 @@ define(['../src/transition', '../src/expression', '../src/state'], function (Tra
 
 			_a = function() { return a },
 			_b = function() { return b },
-			_c = function() { return c},
+			_c = function() { return c },
 
-			result;
+			result,
 
-		var states = [
-			State({
-				name: 'foo',
-				transitions: [
-					Transition(Expression(_a, 'equals', 1), 'bar'),
-					Transition(Expression(_a, 'equals', 2), 'zing'),
-					Transition(Expression(_a, 'equals', 4), 'plork')
-				]
-			}),
-			State({
-				name: 'bar',
-				transitions: [
-					Transition(Expression(_b, 'equals', 1), 'zing')
-				]
-			}),
-			State({
-				name: 'zing',
-				transitions: [
-					Transition(Expression(_c, 'equals', 1), 'ding')
-				]
-			}),
-			State({
-				name: 'ding',
-				transitions: [
-					Transition(Expression(_b, 'equals', 1), 'foo')
-				]
-			}),
-			State({
-				name: 'zork',
-				transitions: []
-			})
-		];
+			states = [
+				State({
+					name: 'do foo',
+					initial: true,
+					transitions: [
+						Transition( when (_a, 'equals', 1), 'do bar'),
+						Transition( when (_a, 'equals', 2), 'do zing'),
+						Transition( when (_a, 'equals', 4), 'do plork')
+					]
+				}),
+				State({
+					name: 'do bar',
+					transitions: [
+						Transition( when (_b, 'equals', 1), 'do zing')
+					]
+				}),
+				State({
+					name: 'do zing',
+					transitions: [
+						Transition( when (_c, 'equals', 1), 'do ding')
+					]
+				}),
+				State({
+					name: 'do ding',
+					transitions: [
+						Transition( when (_b, 'equals', 1), 'do foo')
+					]
+				}),
+				State({
+					name: 'do zork',
+					transitions: []
+				})
+			];
+
+		it('should return its name', function () {
+			expect(states[0].name()).equals('do foo');
+		});
+
+		it('should return its initial flag', function () {
+			expect(states[0].initial()).equals(true);
+			expect(states[1].initial()).equals(false);
+		})
 
 		describe('nextState', function() {
 			it('should return the correct next state', function () {
@@ -72,9 +82,9 @@ define(['../src/transition', '../src/expression', '../src/state'], function (Tra
 		})
 
 		describe('getCurrent', function() {
-			it('should return the correct next state', function () {
+			it('should return the correct current state', function () {
 				a = 1;
-				b = 2
+				b = 2;
 
 				result = states[0].getCurrent(states);
 				expect(result).equal(states[1]);

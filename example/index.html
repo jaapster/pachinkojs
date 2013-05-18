@@ -19,6 +19,8 @@
 	<div class="span4"></div>
 	<div class="span8">
 		<form class="form-horizontal span8">
+			<h3 data-bind="text: logic.stateName"></h3>
+
 			<!-- ko if: logic.stateInPath('asking the age') -->
 			<div class="control-group">
 				<label class="control-label">What is your age?</label>
@@ -32,7 +34,7 @@
 				Yes, you are old enough to drive in the Netherlands!
 			</div>
 			<!-- /ko -->
-			<!-- ko if: logic.stateIs('notifying not old enough') -->
+			<!-- ko if: logic.stateInPath('notifying not old enough') -->
 			<div class="control-group">
 				Sorry, you are not yet old enough to drive in the Netherlands ...
 			</div>

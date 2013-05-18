@@ -1,5 +1,4 @@
-define(['knockout', 'underscore'], function(ko, _) {
-
+define(['knockout', 'underscore', './getCurrentState', './getPath'], function(ko, _, getCurrent, getPath) {
 	// turns a value in an array containing the value
 	function array(val) {
 		return _.isArray(val) ? val : [val];
@@ -8,7 +7,7 @@ define(['knockout', 'underscore'], function(ko, _) {
 	// states: an array of Pachinko.State instances
 	function initial(states) {
 		return _.find(states, function (state) {
-			return state.initial();
+			return state.initial;
 		});
 	}
 
@@ -23,8 +22,8 @@ define(['knockout', 'underscore'], function(ko, _) {
 
 		// updates the current state and path
 		function update() {
-			currentState(start.getCurrent(states));
-			path(start.getPath(states));
+			currentState(getCurrent(start, states));
+			path(getPath(start, states));
 		}
 
 		// if one of triggers changes value, identify the state
@@ -34,12 +33,15 @@ define(['knockout', 'underscore'], function(ko, _) {
 
 		return {
 			update: update,
+
 			stateName: ko.computed(function() {
-				return currentState() ? currentState().name() : '';
+				return currentState() ? currentState().name : '';
 			}),
+
 			stateIs: function(names) {
-				return _.contains(array(names), currentState().name());
+				return _.contains(array(names), currentState().name);
 			},
+
 			stateInPath: function(name) {
 				return _.contains(path(), name);
 			}

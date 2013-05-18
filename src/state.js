@@ -45,7 +45,7 @@ define(['underscore'], function(_){
 			},
 
 			initial: function() {
-				return options.initial;
+				return !!options.initial;
 			},
 
 			_name: options.name
