@@ -1,7 +1,6 @@
 define(['./statemachine', './expression'], function(statemachine, expression) {
 
-	var Pachinko = statemachine;
-		Pachinko.Expression = expression;
+	statemachine.Expression = expression;
 
-	return Pachinko;
+	return statemachine;
 });

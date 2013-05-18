@@ -1,5 +1,5 @@
 define(['underscore'], function(_) {
-	return function (states, state) {
+	return function (state, states) {
 		var active = _.find(state.transitions, function(transition) {
 			return !!transition[0]();
 		});
