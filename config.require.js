@@ -1,17 +1,15 @@
 requirejs.config({
-
 	packages: [
 		{
 			name: "pachinko",
-			location: "../src",
+			location: "src",
 			main: "main"
 		}
 	],
 
 	paths: {
-		// base libraries
-		underscore:					'../libs/lodash',
-		knockout:					'../libs/knockout-latest'
+		underscore: 'libs/lodash',
+		knockout: 'libs/knockout-latest'
 	},
 
 	shim: {

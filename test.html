@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Pachinko</title>
+		<script src="libs/require.js"></script>
+		<script src="config.require.js"></script>
+		<link rel="stylesheet" href="libs/mocha/mocha.css" />
+		<script>
+			requirejs(['test/test-runner'], function (runTests) {
+				runTests({
+					baseUrl: '.',
+					files: [
+						'test/test.getNextState',
+						'test/test.getCurrentState',
+						'test/test.getPath.js'
+					]
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div id="mocha"></div>
+		<div id="mocha-fixtures"></div>
+	</body>
+</html>
