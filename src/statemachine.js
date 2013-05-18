@@ -32,8 +32,6 @@ define(['knockout', 'underscore', './getCurrentState', './getPath'], function(ko
 		update();
 
 		return {
-			update: update,
-
 			stateName: ko.computed(function() {
 				return currentState() ? currentState().name : '';
 			}),
