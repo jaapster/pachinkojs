@@ -6,10 +6,10 @@ define(['underscore', './getNextState'], function(_, getNextState) {
 			name = next.name;
 
 		if (next === state || _.contains(visited, name)) {
-			return [name];
+			return [state.name];
 		} else {
-			var tail = getPath(next, states, visited.concat([name]));
-			return [name].concat(tail);
+			var tail = getPath(next, states, visited.concat([state.name]));
+			return [state.name].concat(tail);
 		}
 	}
 

@@ -3,29 +3,52 @@ define(['pachinko', 'knockout', 'underscore'], function(Pachinko, ko, _) {
 	var when = Pachinko.Expression;
 
 	var model = {
-		name: ko.observable(),
-		age: ko.observable()
+		licensePlate: ko.observable(),
+		licensePlateKnown: ko.observable(),
+		signCode: ko.observable(),
+		signCodeKnown: ko.observable(),
+		registrationNumber: ko.observable()
 	};
 
 	var p = Pachinko([
 		{
-			name: 'asking the age',
+			name: 'asking if the license plate is know',
 			initial: true,
 			transitions: [
-				[ when(model.age, 'is greater than', 17), 'notifying old enough' ],
-				[ when(model.age, 'is less than', 18), 'notifying not old enough' ]
+				[ when(model.licensePlateKnown, 'equals', 'yes'), 'asking the license plate'],
+				[ when(model.licensePlateKnown, 'equals', 'no'), 'asking the registration number']
 			]
 		},{
-			name: 'notifying old enough',
+			name: 'asking the license plate',
 			transitions: [
-				[ when(model.age, 'is greater than', 17), 'asking the age' ]
+				[ when(model.licensePlate, 'has a value'), 'asking if the sign code is known']
 			]
 		},{
-			name: 'notifying not old enough',
+			name: 'asking if the sign code is known',
+			transitions: [
+				[ when(model.signCodeKnown, 'equals', 'yes'), 'asking the sign code'],
+				[ when(model.signCodeKnown, 'equals', 'no'), 'asking the registration number']
+			]
+		},{
+			name: 'asking the sign code',
+			transitions: [
+				[ when(model.signCode, 'has a value'), 'showing the summary']
+			]
+		},{
+			name: 'asking the registration number',
+			transitions: [
+				[ when(model.registrationNumber, 'has a value'), 'showing the summary']
+			]
+		},{
+			name: 'showing the summary',
 			transitions: []
 		}
 	], [
-		model.age
+		model.licensePlate,
+		model.licensePlateKnown,
+		model.signCode,
+		model.signCodeKnown,
+		model.registrationNumber
 	]);
 
 	_.extend(model, {

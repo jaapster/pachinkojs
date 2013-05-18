@@ -1,4 +1,4 @@
-define(['../src/expression', '../src/getNextState'], function (when, getNextState) {
+define(['../src/expression', '../src/getPath'], function (when, getPath) {
 
 	var a, b, c,
 
@@ -42,31 +42,27 @@ define(['../src/expression', '../src/getNextState'], function (when, getNextStat
 			}
 		];
 
-	describe('getNextState', function() {
-		it('should return the correct next state for a state', function () {
+	describe('getPath', function() {
+		it('should return the correct path to the current state', function () {
 			a = 1;
 
-			result = getNextState(states, states[0]);
-			expect(result).equal(states[1]);
+			result = getPath(states[0], states);
+			expect(result).eql(['do foo', 'do bar']);
 
-			a = 2;
+			a = 1;
+			b = 1;
 
-			result = getNextState(states, states[0]);
-			expect(result).equal(states[2]);
+			result = getPath(states[0], states);
+			expect(result).eql(['do foo', 'do bar', 'do zing']);
 		});
 
-		it('should return the given state if none of its transitions evaluate to true', function () {
-			a = 8;
+		it('should prevent loops', function () {
+			a = 1;
+			b = 1;
+			c = 1;
 
-			result = getNextState(states, states[0]);
-			expect(result).equal(states[0]);
-		});
-
-		it('should return itself if the next state can not be found', function () {
-			a = 4;
-
-			result = getNextState(states, states[0]);
-			expect(result).equal(states[0]);
+			result = getPath(states[0], states);
+			expect(result).eql(['do foo', 'do bar', 'do zing', 'do ding']);
 		});
 	});
 });

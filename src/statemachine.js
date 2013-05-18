@@ -4,14 +4,14 @@ define(['knockout', 'underscore', './getCurrentState', './getPath'], function(ko
 		return _.isArray(val) ? val : [val];
 	}
 
-	// states: an array of Pachinko.State instances
+	// states: an array of state objects
 	function initial(states) {
 		return _.find(states, function (state) {
 			return state.initial;
 		});
 	}
 
-	// states: an array of Pachinko.State instances
+	// states: an array of state objects
 	// triggers: an array of knockout observables
 	return function(states, triggers) {
 		var start = initial(states),

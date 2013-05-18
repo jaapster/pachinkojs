@@ -1,5 +1,5 @@
 define(['underscore', './getNextState'], function(_, getNextState) {
-	function getCurrent(state, states, visited) {
+	function getCurrentState(state, states, visited) {
 		visited = visited || [];
 
 		var next = getNextState(states, state);
@@ -7,9 +7,9 @@ define(['underscore', './getNextState'], function(_, getNextState) {
 		if (next === state || _.contains(visited, next)) {
 			return state;
 		} else {
-			return getCurrent(next, states, visited.concat(state));
+			return getCurrentState(next, states, visited.concat(state));
 		}
 	}
 
-	return getCurrent;
+	return getCurrentState;
 });

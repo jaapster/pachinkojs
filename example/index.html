@@ -3,8 +3,8 @@
 <head>
 	<title>Examples</title>
 	<link href="css/bootstrap.css" rel="stylesheet"/>
-	<script src="../libs/require.js" data-main="main"></script>
-	<script src="../config.require.js"></script>
+	<script src="../libs/require.js" data-main="./main"></script>
+	<script src="config.require.js"></script>
 </head>
 <body>
 <div class="navbar">
@@ -21,24 +21,74 @@
 		<form class="form-horizontal span8">
 			<h3 data-bind="text: logic.stateName"></h3>
 
-			<!-- ko if: logic.stateInPath('asking the age') -->
+			<!-- ko if: logic.stateInPath('asking if the license plate is know') -->
 			<div class="control-group">
-				<label class="control-label">What is your age?</label>
+				<label class="control-label">Do you know the license plate?</label>
 				<div class="controls">
-					<input type="text" data-bind="value: age" required/>
+					<label class="radio inline">
+						<input type="radio" data-bind="checked: licensePlateKnown" value="yes"/>
+						yes
+					</label>
+					<label class="radio inline">
+						<input type="radio" data-bind="checked: licensePlateKnown" value="no"/>
+						no
+					</label>
 				</div>
 			</div>
 			<!-- /ko -->
-			<!-- ko if: logic.stateInPath('notifying old enough') -->
+
+			<!-- ko if: logic.stateInPath('asking the license plate') -->
 			<div class="control-group">
-				Yes, you are old enough to drive in the Netherlands!
+				<label class="control-label">License plate</label>
+				<div class="controls">
+					<input type="text" data-bind="value: licensePlate" required/>
+				</div>
 			</div>
 			<!-- /ko -->
-			<!-- ko if: logic.stateInPath('notifying not old enough') -->
+
+			<!-- ko if: logic.stateInPath('asking if the sign code is known') -->
 			<div class="control-group">
-				Sorry, you are not yet old enough to drive in the Netherlands ...
+				<label class="control-label">Do you know the sign code?</label>
+				<div class="controls">
+					<label class="radio inline">
+						<input type="radio" data-bind="checked: signCodeKnown" value="yes"/>
+						yes
+					</label>
+					<label class="radio inline">
+						<input type="radio" data-bind="checked: signCodeKnown" value="no"/>
+						no
+					</label>
+				</div>
 			</div>
 			<!-- /ko -->
+
+			<!-- ko if: logic.stateInPath('asking the sign code') -->
+			<div class="control-group">
+				<label class="control-label">Sign code</label>
+				<div class="controls">
+					<input type="text" data-bind="value: signCode" required/>
+				</div>
+			</div>
+			<!-- /ko -->
+
+			<!-- ko if: logic.stateInPath('asking the registration number') -->
+			<div class="control-group">
+				<label class="control-label">Registration number</label>
+				<div class="controls">
+					<input type="text" data-bind="value: registrationNumber" required/>
+				</div>
+			</div>
+			<!-- /ko -->
+
+			<!-- ko if: logic.stateInPath('showing the summary') -->
+			<div class="control-group">
+				<label class="control-label">Summary</label>
+				<div class="controls">
+
+				</div>
+			</div>
+			<!-- /ko -->
+
 		</form>
 	</div>
 </div>
