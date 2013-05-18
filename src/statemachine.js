@@ -1,4 +1,4 @@
-define(['knockout', 'underscore', './getCurrentState', './getPath'], function(ko, _, getCurrent, getPath) {
+define(['knockout', 'underscore', './getCurrentState', './getPath'], function(ko, _, getCurrentState, getPath) {
 	// turns a value in an array containing the value
 	function array(val) {
 		return _.isArray(val) ? val : [val];
@@ -22,7 +22,7 @@ define(['knockout', 'underscore', './getCurrentState', './getPath'], function(ko
 
 		// updates the current state and path
 		function update() {
-			currentState(getCurrent(start, states));
+			currentState(getCurrentState(start, states));
 			path(getPath(start, states));
 		}
 
