@@ -13,14 +13,8 @@ define(['pachinko', 'knockout', 'underscore'], function(Pachinko, ko, _) {
 	_.extend(model, {
 		logic: Pachinko([
 			{
-				name: 'checking the license plate',
-				initial: true,
-				transitions: [
-					[ when(model.licensePlate, 'has a value'), 'asking the license plate'],
-					[ when(model.licensePlate, 'has no value'), 'asking if the license plate is know']
-				]
-			},{
 				name: 'asking if the license plate is know',
+				initial: true,
 				transitions: [
 					[ when(model.licensePlateKnown, 'equals', 'yes'), 'asking the license plate'],
 					[ when(model.licensePlateKnown, 'equals', 'no'), 'asking the registration number']

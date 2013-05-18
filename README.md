@@ -1,4 +1,4 @@
 pachinkojs
 ==========
 
-Functional state machine
+Functional state identifier.
