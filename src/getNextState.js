@@ -9,8 +9,6 @@ define(['underscore'], function(_) {
 				return state.name === name;
 			});
 
-		console.log(next, state);
-
 		return next || state;
 	}
 })

@@ -55,7 +55,6 @@ define(['knockout', 'underscore', './getCurrentState', './getPath'], function(ko
 			},
 
 			stateInPath: function(name) {
-				console.log(path(), name);
 				return _.contains(path(), name);
 			}
 		}

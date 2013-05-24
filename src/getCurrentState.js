@@ -4,11 +4,9 @@ define(['underscore', './getNextState'], function(_, getNextState) {
 
 		var next = getNextState(state, states);
 
-		if (next === state || _.contains(visited, next)) {
-			return state;
-		} else {
-			return getCurrentState(next, states, visited.concat(state));
-		}
+		return next && next !== state && !_.contains(visited, next)
+			?  getCurrentState(next, states, visited.concat(state))
+			: state;
 	}
 
 	return getCurrentState;
