@@ -1,6 +1,13 @@
-define(['./statemachine', './expression'], function(statemachine, expression) {
+define([
+	'./statemachine',
+	'./expression',
+	'./getObservable',
+	'./getObservableObject'
+], function(main, expression, getObservable, getObservableObject) {
 
-	statemachine.Expression = expression;
+	main.Expression = expression;
+	main.getObservable = getObservable;
+	main.getObservableObject = getObservableObject;
 
-	return statemachine;
+	return main;
 });

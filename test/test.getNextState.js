@@ -46,26 +46,26 @@ define(['../src/expression', '../src/getNextState'], function (when, getNextStat
 		it('should return the correct next state for a state', function () {
 			a = 1;
 
-			result = getNextState(states, states[0]);
+			result = getNextState(states[0], states);
 			expect(result).equal(states[1]);
 
 			a = 2;
 
-			result = getNextState(states, states[0]);
+			result = getNextState(states[0], states);
 			expect(result).equal(states[2]);
 		});
 
 		it('should return the given state if none of its transitions evaluate to true', function () {
 			a = 8;
 
-			result = getNextState(states, states[0]);
+			result = getNextState(states[0], states);
 			expect(result).equal(states[0]);
 		});
 
 		it('should return itself if the next state can not be found', function () {
 			a = 4;
 
-			result = getNextState(states, states[0]);
+			result = getNextState(states[0], states);
 			expect(result).equal(states[0]);
 		});
 	});

@@ -9,7 +9,8 @@ requirejs.config({
 
 	paths: {
 		underscore: '../libs/lodash',
-		knockout: '../libs/knockout-latest'
+		knockout: '../libs/knockout-latest',
+		'jquery': '../libs/jquery'
 	},
 
 	shim: {

@@ -11,7 +11,7 @@ define(['pachinko', 'knockout', 'underscore'], function(Pachinko, ko, _) {
 	};
 
 	_.extend(model, {
-		logic: Pachinko([
+			logic: Pachinko([
 			{
 				name: 'asking if the license plate is know',
 				initial: true,

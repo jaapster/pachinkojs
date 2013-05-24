@@ -13,17 +13,24 @@ define(['knockout', 'underscore', './getCurrentState', './getPath'], function(ko
 
 	// states: an array of state objects
 	// triggers: an array of knockout observables
-	return function(states, triggers) {
+	return function(states, triggers, persistent) {
 		var start = initial(states),
+			current = start,
 			currentState = ko.observable(),
 			path = ko.observableArray();
+
+		var onUpdate = null;
 
 		if (!start) throw Error('No initial state specified');
 
 		// updates the current state and path
 		function update() {
-			currentState(getCurrentState(start, states));
-			path(getPath(start, states));
+			var init = persistent ? current : start;
+
+			currentState(getCurrentState(init, states));
+			path(getPath(init, states));
+
+			current = currentState();
 		}
 
 		// if one of triggers changes value, identify the state
@@ -32,6 +39,13 @@ define(['knockout', 'underscore', './getCurrentState', './getPath'], function(ko
 		update();
 
 		return {
+			update: update,
+
+			reset: function () {
+				current = start;
+				update();
+			},
+
 			stateName: ko.computed(function() {
 				return currentState() ? currentState().name : '';
 			}),
@@ -41,6 +55,7 @@ define(['knockout', 'underscore', './getCurrentState', './getPath'], function(ko
 			},
 
 			stateInPath: function(name) {
+				console.log(path(), name);
 				return _.contains(path(), name);
 			}
 		}

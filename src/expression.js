@@ -16,10 +16,11 @@ define(['underscore'], function(_) {
 		return function evalExpression() {
 			switch(operator()) {
 				case 'equals':			return left() === right();
+				case 'does not equal':	return left() !== right();
 				case 'is greater than':	return left() > right();
 				case 'is less than':	return left() < right();
 				case 'is truthy':		return !!left();
-				case 'is falsy':		return !!!left();
+				case 'is falsy':		return !left();
 				case 'has a value':		return hasValue(left);
 				case 'has no value':	return !hasValue(left);
 				case 'or':				return left() || right();
